@@ -128,3 +128,12 @@ body {
 .submit-image:hover {
 	background: #09a7e1;
 }
+
+.extension-image {
+	background: #f4b71c;
+	border-bottom: 4px solid #ca9d29;;
+}
+
+.extension-image:hover {
+	background: #e3ac1e;
+}

@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form class="file-upload" method="post">
+    <form class="file-upload" method="get">
         <div class="center-text">
           <h1>Im-Conv</h1>
           <p>Convert any image from one format to another</p>
@@ -22,6 +22,29 @@
             <img class="file-upload-image" src="#" alt="your image" />
             <div class="image-title-wrap">
                 <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Image</span></button>
+            </div>
+            <div class="image-title-wrap">
+                <select class="remove-image extension-image" name="extension">
+                  <option>PNG</option>
+                  <option>BMP</option>
+                  <option>EPS</option>
+                  <option>GIF</option>
+                  <option>ICNS</option>
+                  <option>ICO</option>
+                  <option>IM</option>
+                  <option>JPG</option>
+                  <option>JPEG</option>
+                  <option>MSP</option>
+                  <option>PCX</option>
+                  <option>PPM</option>
+                  <option>SGI</option>
+                  <option>SPI</option>
+                  <option>TIFF</option>
+                  <option>WebP</option>
+                  <option>XBM</option>
+                  <option>PDF</option>
+                  <option>PALM</option>
+                </select>
             </div>
             <div class="image-title-wrap">
                 <input type="submit" class="remove-image submit-image" value="Submit Image">
