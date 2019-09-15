@@ -1,21 +1,35 @@
-<link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
 
-<script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<div class="file-upload">
-  <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button>
+<html>
+<head>
+    <title>Im-Conv - Image Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form class="file-upload" method="post">
+        <div class="center-text">
+          <h1>Im-Conv</h1>
+          <p>Convert any image from one format to another</p>
+        </div>
+        <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Select Image</button>
+        <div class="image-upload-wrap">
+            <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+            <div class="drag-text">
+                <h3>Drag and drop a file or select an Image to add</h3>
+            </div>
+        </div>
+        <div class="file-upload-content">
+            <img class="file-upload-image" src="#" alt="your image" />
+            <div class="image-title-wrap">
+                <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Image</span></button>
+            </div>
+            <div class="image-title-wrap">
+                <input type="submit" class="remove-image submit-image" value="Submit Image">
+            </div>
+        </div>
+    </form>
 
-  <div class="image-upload-wrap">
-    <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
-    <div class="drag-text">
-      <h3>Drag and drop a file or select add Image</h3>
-    </div>
-  </div>
-  <div class="file-upload-content">
-    <img class="file-upload-image" src="#" alt="your image" />
-    <div class="image-title-wrap">
-      <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Image</span></button>
-    </div>
-  </div>
-</div>
-
-<script src="script.js"></script>
+    <script class="jsbin" src="jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
