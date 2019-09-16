@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form class="file-upload" method="get">
+    <form class="file-upload" method="post">
         <div class="center-text">
           <h1>Im-Conv</h1>
           <p>Convert any image from one format to another</p>
@@ -47,6 +47,7 @@
                 </select>
             </div>
             <div class="image-title-wrap">
+                <input type="hidden" id="img_token" name="img_token" value="#">
                 <input type="submit" class="remove-image submit-image" value="Submit Image">
             </div>
         </div>
