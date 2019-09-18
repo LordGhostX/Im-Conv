@@ -1,9 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 
 <html>
 <head>
     <title>Im-Conv - Image Converter</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
     <form class="file-upload" method="post">
@@ -53,7 +54,7 @@
         </div>
     </form>
 
-    <script class="jsbin" src="jquery.min.js"></script>
-    <script src="script.js"></script>
+    <script class="jsbin" src="{% static 'jquery.min.js' %}"></script>
+    <script src="{% static 'script.js' %}"></script>
 </body>
 </html>
