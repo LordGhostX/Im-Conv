@@ -8,6 +8,7 @@ function readURL(input) {
 
             $('.file-upload-image').attr('src', e.target.result);
             $('#img_token').attr('value', e.target.result);
+            $('#orig_ext').attr('value', input.files[0].name.split('.').pop());
             $('.file-upload-content').show();
 
             $('.image-title').html(input.files[0].name);

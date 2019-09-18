@@ -9,9 +9,9 @@ def decode_base64(data, altchars=b'+/'):
         data += b'='* (4 - missing_padding)
     return base64.b64decode(data, altchars)
 
-def converter(img_token, extension="PNG", rand_min=1, rand_max=10000):
+def converter(img_token, orig_ext, extension="PNG", rand_min=1, rand_max=10000):
     imgdata = decode_base64(img_token.encode())
-    filename = '{}-{}-{}-{}.png'.format(randint(rand_min, rand_max), randint(rand_min, rand_max), randint(rand_min, rand_max), randint(rand_min, rand_max))
+    filename = '{}-{}-{}-{}.{}'.format(randint(rand_min, rand_max), randint(rand_min, rand_max), randint(rand_min, rand_max), randint(rand_min, rand_max), orig_ext.lower())
     with open(filename, 'wb') as f:
         f.write(imgdata)
 
