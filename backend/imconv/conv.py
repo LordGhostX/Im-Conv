@@ -19,5 +19,5 @@ def converter(img_token, orig_ext, extension="PNG", rand_min=1, rand_max=10000):
             img = background
             del background
 
-    img.save(filename + "." + extension.lower(), extension.lower())
+    img.save("imconv/static/" + filename + "." + extension.lower(), extension.lower())
     return filename

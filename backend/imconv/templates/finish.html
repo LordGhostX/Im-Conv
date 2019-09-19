@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Im-Conv - Image Converter</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="file-upload">
+        <div class="center-text">
+          <h1>Im-Conv</h1>
+          <p>Convert any image from one format to another</p>
+        </div>
+		<h3 class="center-text">Click the button to download your image in {{ extension }} format.</h3>
+        <a href="/static/{{ file_id }}" target="_blank"><button class="file-upload-btn">Download Image</button></a>
+        <a href="/"><button class="file-upload-btn">Start Again</button></a>
+    </div>
+
+    <script class="jsbin" src="{% static 'jquery.min.js' %}"></script>
+</body>
+</html>
