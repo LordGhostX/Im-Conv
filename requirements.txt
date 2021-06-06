@@ -1,2 +1,2 @@
-Django==2.2.18
+Django==2.2.21
 Pillow==8.1.1
